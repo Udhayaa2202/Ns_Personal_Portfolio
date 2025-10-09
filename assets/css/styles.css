@@ -70,7 +70,10 @@ body {
   color: var(--text-color);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--title-color);
   font-weight: var(--font-bold);
 }
@@ -116,22 +119,22 @@ img {
   padding-block: 4rem 2rem;
 }
 
-.section__title-1, 
-.section__title-2 {
+.section_title-1,
+.section_title-2 {
   position: relative;
   font-size: var(--h1-font-size);
   width: max-content;
   margin: .75rem auto 2rem;
 }
 
-.section__title-1 span, 
-.section__title-2 span {
+.section_title-1 span,
+.section_title-2 span {
   z-index: 5;
   position: relative;
 }
 
-.section__title-1::after, 
-.section__title-2::after {
+.section_title-1::after,
+.section_title-2::after {
   content: "";
   width: 40px;
   height: 28px;
@@ -141,7 +144,7 @@ img {
   right: -8px;
 }
 
-.section__title-2::after {
+.section_title-2::after {
   top: initial;
   bottom: -4px;
 }
@@ -165,12 +168,13 @@ img {
 }
 
 .main {
-  overflow: hidden; /* For animation ScrollReveal */
+  overflow: hidden;
+  /* For animation ScrollReveal */
 }
 
 /*=============== HEADER & NAV ===============*/
-  
-.header{
+
+.header {
   position: fixed;
   width: 100%;
   top: 0;
@@ -180,7 +184,7 @@ img {
   transition: box-shadow .4s;
 }
 
-nav{
+nav {
   position: relative;
   height: var(--header-height);
   display: flex;
@@ -188,7 +192,7 @@ nav{
   align-items: center;
 }
 
-.nav_logo{
+.nav_logo {
   display: flex;
   column-gap: 5rem;
   align-items: center;
@@ -197,7 +201,7 @@ nav{
 }
 
 .nav_logo-circle,
-.nav_toggle{
+.nav_toggle {
   width: 32px;
   height: 32px;
   background-color: var(--black-color);
@@ -206,17 +210,18 @@ nav{
   place-items: center;
 }
 
-.nav_logo-circle{
+.nav_logo-circle {
   border-radius: 50%;
 }
 
-.nav_toggle{
+.nav_toggle {
   font-size: 1.25rem;
   cursor: pointer;
 }
+
 /* Navigation for mobile devices */
-@media screen and (max-width:1150px){
-  .nav_menu{
+@media screen and (max-width:1150px) {
+  .nav_menu {
     position: fixed;
     top: -100%;
     left: 0;
@@ -229,18 +234,20 @@ nav{
   }
 }
 
-.nav_title, .nav_name, .nav_close{
+.nav_title,
+.nav_name,
+.nav_close {
   color: var(--white-color);
 }
 
-.nav_title{
+.nav_title {
   display: block;
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
   margin-bottom: 3.5rem;
 }
 
-.nav_name{
+.nav_name {
   position: relative;
   width: max-content;
   margin: 0 auto 3rem;
@@ -248,7 +255,7 @@ nav{
 }
 
 .nav_name::after,
-.nav_name::before{
+.nav_name::before {
   content: '';
   width: 40px;
   height: 1px;
@@ -258,18 +265,18 @@ nav{
   left: -4rem;
 }
 
-.nav_name::before{
+.nav_name::before {
   left: initial;
   right: -4rem;
 }
 
-.nav_list{
+.nav_list {
   display: flex;
   flex-direction: column;
   row-gap: 2.5rem;
 }
 
-.nav_link{
+.nav_link {
   position: relative;
   color: var(--text-color-light);
   font-size: var(--h3-font-size);
@@ -277,7 +284,7 @@ nav{
   transition: color .3s;
 }
 
-.nav_link::after{
+.nav_link::after {
   content: '';
   width: 0;
   height: 2px;
@@ -288,15 +295,15 @@ nav{
   transition: width .3s;
 }
 
-.nav_link:hover{
+.nav_link:hover {
   color: var(--white-color);
 }
 
-.nav_link:hover::after{
+.nav_link:hover::after {
   width: 25%;
 }
 
-.nav_close{
+.nav_close {
   position: absolute;
   font-size: 1.5rem;
   top: 1rem;
@@ -306,34 +313,299 @@ nav{
 
 
 /* Show menu */
-.show-menu{
+.show-menu {
   top: 0;
 }
 
 /* Add shadow header */
-
+.shadow-header {
+  box-shadow: 0 1px 16px hsla(0, 0%, 0%, .12);
+}
 
 /* Active link */
 
 
 /*=============== HOME ===============*/
-.home_container{
+.home_container {
   padding-top: 2rem;
 }
 
-.home_name{
+.home_name {
   font-size: var(--biggest-font-size);
   text-align: center;
+}
+
+.home_perfil {
+  position: relative;
+  justify-self: center;
+}
+
+.home_image {
+  width: 220px;
+}
+
+.home_img {
+  position: relative;
+  z-index: 10;
+}
+
+.home_shadow {
+  width: 100%;
+  height: 100%;
+  background-color: var(--container-color);
+  position: absolute;
+  bottom: -.75rem;
+  right: -.75rem;
+  border: 4px solid var(--black-color);
+  z-index: 5;
+  transition: background-color .4s;
+}
+
+.home_arrow,
+.home_line {
+  position: absolute;
+  filter: invert(1);
+  width: 50px;
+  transition: filter .4s;
+}
+
+.home_arrow {
+  left: 40%;
+  bottom: -4rem;
+}
+
+.home_line {
+  right: -2rem;
+  bottom: -.5rem;
+}
+
+.home_perfil .geometric-box {
+  top: 2.5rem;
+  left: -.7rem;
+  z-index: 10;
+}
+
+.home_social {
+  height: max-content;
+  position: absolute;
+  left: -3rem;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  display: grid;
+  row-gap: 1rem;
+}
+
+.home_social-link {
+  background-color: var(--black-color-light);
+  color: var(--white-color);
+  font-size: 1.25rem;
+  padding: 6px;
+  display: grid;
+  place-items: center;
+  transition: background-color .3s;
+}
+
+.home_social-link:hover {
+  background-color: var(--black-color);
+}
+
+.home_info {
+  margin-top: 4rem;
+}
+
+.home_description {
+  text-align: center;
+  color: var(--title-color);
+  margin-bottom: 1.5rem;
+}
+
+.home_description b {
+  background: linear-gradient(90deg,
+      hsla(14, 98%, 50%, .3),
+      hsla(14, 98%, 50%, 0));
+}
+
+.home_scroll {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.home_scroll-text {
+  display: none;
+}
+
+.home_scroll-box {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color .4s;
+}
+
+.home_scroll-box i {
+  animation: scroll-down 3s infinite;
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(.6rem);
+    opacity: 0;
+  }
 }
 
 /* Animate scroll icon */
 
 
 /*=============== BUTTON ===============*/
+.button,
+.button_ghost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: .5rem;
+}
 
+.button {
+  background-color: var(--black-color);
+  padding: 1.1rem 1.5rem;
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+  transition: background-color .4s;
+}
 
+.button i {
+  font-size: 1.25rem;
+}
+
+button:hover {
+  background-color: var(--first-color);
+}
+
+.button_ghost {
+  border: 3px solid var(--black-color);
+  color: var(--black-color);
+  padding: .5rem;
+  transition: border .4s, color .4s;
+}
+
+.button_ghost i{
+  font-size: 1.25rem;
+}
+
+.button_ghost:hover{
+  border: 3px solid var(--first-color);
+}
 /*=============== ABOUT ===============*/
+.about {
+  background-color: var(--container-color);
+  transition: background-color .4s;
+}
 
+.about_container {
+  row-gap: 0;
+}
+
+.about_prefil {
+  position: relative;
+  justify-self: center;
+  margin-block: 2.5rem 4.5rem;
+}
+
+.about_image {
+  width: 220px;
+}
+
+.about_img {
+  position: relative;
+  border: 4px solid var(--white-color);
+  z-index: 1;
+}
+
+.about_shadow,
+.about_line,
+.about_box {
+  position: absolute;
+}
+
+.about_shadow {
+  width: 150px;
+  height: 385px;
+  background-color: var(--body-color);
+  top: -2rem;
+  right: -3.5rem;
+  border-bottom: 4px solid var(--first-color);
+  transition: background-color .4s;
+}
+
+.about_prefil .geometric-box {
+  top: 1.5rem;
+  right: -2.8rem;
+}
+
+.about_line {
+  filter: invert();
+  right: -1.25rem;
+  top: 6rem;
+  width: 50px;
+  transition: filter .4s;
+}
+
+.about_box {
+  width: 40px;
+  height: 40px;
+  background-color: var(--first-color);
+  right: -.5rem;
+  bottom: 1.5rem;
+}
+
+.about_info {
+  padding-left: 1.25rem;
+}
+
+.about_description {
+  position: relative;
+  color: var(--title-color);
+  margin-bottom: 1.5rem;
+}
+
+.about_description::after {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background-color: var(--title-color);
+  position: absolute;
+  left: -1.7rem;
+  top: .5rem;
+}
+
+.about_list {
+  list-style: square;
+  color: var(--title-color);
+  margin-bottom: 3rem;
+}
+
+.about_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+}
 
 /*=============== SERVICES ===============*/
 
