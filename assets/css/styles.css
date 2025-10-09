@@ -317,7 +317,14 @@ nav{
 
 
 /*=============== HOME ===============*/
+.home_container{
+  padding-top: 2rem;
+}
 
+.home_name{
+  font-size: var(--biggest-font-size);
+  text-align: center;
+}
 
 /* Animate scroll icon */
 
