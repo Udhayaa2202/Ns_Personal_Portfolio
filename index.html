@@ -385,7 +385,89 @@
 
       <!--==================== CONTACT ====================-->
       <section class="contact section" id="contact">
+         <div class="contact_container grid">
+            <div class="contact_data">
+               <h2 class="section_title-2">
+                  <span>Contact Me.</span>
+               </h2>
+               <p class="contact_description-1">
+                  I will read all emails. Send me any
+                  message you want and I'll get back to you.
+               </p>
+               <p class="contact_description-2">
 
+                  I need your <b>Name</b> and <b>Email Address</b>, but
+                  you won't receive anything other than your reply.
+               </p>
+               <div class="geometric-box"></div>
+            </div>
+
+            <div class="contact_mail">
+               <h2 class="contact_title">
+                  Send Me A Message
+               </h2>
+               <form action="" class="contact_form" id="contact-form">
+                  <div class="contact_group">
+                     <div class="contact_box">
+                        <input type="text" name="user_name" class="contact_input" id="name" required
+                           placeholder="First Name">
+                        <label for="name" class="contact_label">First Name</label>
+                     </div>
+
+                     <div class="contact_box">
+                        <input type="email" name="user_email" class="contact_input" id="email" required
+                           placeholder="Email Address">
+                        <label for="email" class="contact_label">Email Address</label>
+                     </div>
+                  </div>
+                  <div class="contact_box">
+                     <input type="text" name="user_subject" class="contact_input" id="subject" required
+                        placeholder="Subject">
+                     <label for="subject" class="contact_label">Subject</label>
+                  </div>
+
+                  <div class="contact_box contact_area">
+                     <textarea name="user_message" id="message" class="contact_input" required
+                        placeholder="Message"></textarea>
+                     <label for="message" class="contact_label">Message</label>
+                  </div>
+
+                  <p class="contact_message" id="contact-message"></p>
+                  <button type="submit" class="contact_button button">
+                     <i class="ri-send-plane-line"></i> Send Message
+                  </button>
+               </form>
+            </div>
+
+            <div class="contact_social">
+               <img src="assets/img/curved-arrow.svg" alt="" class="contact_social-arrow">
+               <div class="contact_social-data">
+                  <div>
+                     <p class="contact_social-description-1">
+                        Does not send emails
+                     </p>
+
+                     <p class="contact_social-description-2">
+                        Write me on my social networks
+                     </p>
+                  </div>
+
+                  <div class="contact_social-links">
+                     <a href="https://www.facebook.com/" target="_blank" class="contact_social-link">
+                        <i class="ri-facebook-circle-line"></i>
+                     </a>
+
+                     <a href="https://www.instagram.com/" target="_blank" class="contact_social-link">
+                        <i class="ri-instagram-line"></i>
+                     </a>
+
+                     <a href="https://www.linkedin.com/" target="_blank" class="contact_social-link">
+                        <i class="ri-linkedin-box-line"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
       </section>
    </main>
 
@@ -401,8 +483,7 @@
    <script src=""></script>
 
    <!--=============== EMAIL JS ===============-->
-
-
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
    <!--=============== MAIN JS ===============-->
    <script src="assets/js/main.js"></script>
 </body>
