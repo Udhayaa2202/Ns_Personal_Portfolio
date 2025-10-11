@@ -1005,6 +1005,7 @@ button:hover {
   display: flex;
   justify-content: center;
   column-gap: .75rem;
+  margin-bottom: 1.5rem;
 }
 
 .contact_social-link{
