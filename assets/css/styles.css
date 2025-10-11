@@ -1102,7 +1102,32 @@ button:hover {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (max-width: 340px) {
+  .container{
+    margin-inline: 1rem;
+  }
 
+  .home_image{
+    width: 180px;
+  }
+
+  .about_image{
+    width: 180px;
+  }
+
+  .about_shadow{
+    height: 330px;
+    right: -2.5rem;
+  }
+
+  .contact_data{
+    width: 100%;
+  }
+
+  .contact_data .section_title-2{
+    transform: translateX(0);
+  }
+}
 
 /* For medium devices */
 
